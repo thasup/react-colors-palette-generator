@@ -19,15 +19,23 @@ const postPrompt = async (query: string): Promise<Response> => {
   if (!query) {
     throw new Error("Missing a query");
   }
-  return fetch("https://suppee.shop/general-chatgpt-server/v1/colors/chat", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/x-www-form-urlencoded",
-    },
-    body: new URLSearchParams({
-      query,
-    }),
-  });
+  const response = await fetch(
+    "https://suppee.shop/general-chatgpt-server/v1/colors/chat",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: new URLSearchParams({
+        query,
+      }),
+    }
+  );
+
+  const data = response.json();
+  console.log(response, data);
+
+  return data;
 };
 
 export default function HelloWorld(props: HelloWorldProps) {
@@ -50,8 +58,8 @@ export default function HelloWorld(props: HelloWorldProps) {
     try {
       console.log("bf", value);
 
-      const res = await postPrompt(value);
-      console.log("response : ", res.body);
+      const result = await postPrompt(value);
+      console.log("response : ", result);
     } catch {
       setLoading(false);
       setErrMessage("Something went wrong! Please try again.");
