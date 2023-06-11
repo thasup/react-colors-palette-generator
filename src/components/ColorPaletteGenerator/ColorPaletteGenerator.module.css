@@ -1,0 +1,52 @@
+.colorsForm {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center;
+  position: absolute !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+.colorsForm .textInput {
+  position: relative;
+}
+
+.colorsForm label,
+.colorsForm input {
+  color: white !important;
+  text-shadow: 1px 1px black;
+}
+
+.colorsForm button {
+  margin-left: 1.5rem;
+}
+
+.colorsForm .messageText {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  margin: 0.5rem 0;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 1px 1px black;
+}
+
+.colorsBlock {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background-color: #626262;
+}
+
+@media screen and (max-width: 680px) {
+  .colorsForm {
+    flex-direction: column !important;
+  }
+
+  .colorsForm button {
+    margin-top: 0.5rem;
+    margin-left: 0;
+  }
+}

@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import ReactGA from "react-ga";
 import { Helmet } from "react-helmet";
 
+import ColorPaletteGenerator from "@/components/ColorPaletteGenerator/ColorPaletteGenerator";
 
 import styles from "./App.module.css";
 
@@ -18,6 +19,7 @@ export default function App() {
         />
       </Helmet>
       <main className={styles.main}>
+        <ColorPaletteGenerator />
       </main>
     </Fragment>
   );
