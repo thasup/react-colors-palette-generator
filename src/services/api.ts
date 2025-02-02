@@ -12,14 +12,14 @@ const postPrompt = async (query: string): Promise<PromptResponse> => {
     throw new Error("Missing a query");
   }
   const response = await fetch(
-    "https://suppee.shop/general-chatgpt-server/v1/colors/chat",
+    "https://general-chatgpt-server.onrender.com/v1/colors/chat",
     {
       method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
       },
       body: new URLSearchParams({
-        query,
+        input: query,
       }),
     }
   );
