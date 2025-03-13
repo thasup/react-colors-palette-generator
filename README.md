@@ -1,49 +1,71 @@
-# React TypeScript template with Vite
+# Color Palette Generator Application
 
-This is a [React](https://reactjs.org) + [TypeScript](https://www.typescriptlang.org/) boilerplate built with [Vite](https://vitejs.dev).
+This application is a Color Palette Generator built with [React](https://reactjs.org), [TypeScript](https://www.typescriptlang.org/), and [Vite](https://vitejs.dev). It allows users to generate color palettes based on their input instructions.
 
-## What's inside?
+## Features
 
-- [ReactJS](https://reactjs.org)
-- [Vite](https://vitejs.dev)
-- [TypeScript](https://www.typescriptlang.org)
-- [Jest](https://jestjs.io)
-- [Testing Library](https://testing-library.com)
-- [Cypress](https://www.cypress.io)
-- [ESLint](https://eslint.org)
-- [Prettier](https://prettier.io)
-- [Polyfills](https://github.com/vitejs/vite/tree/main/packages/plugin-legacy#readme)
+- **Dynamic Color Generation**: Users can input instructions to generate color palettes.
+- **Clipboard Functionality**: Click on a color block to copy its hex code to the clipboard.
+- **Responsive Design**: The application is designed to be responsive and user-friendly.
+- **Error Handling**: Provides feedback for successful and unsuccessful operations.
 
-## Getting started
+## Technologies Used
 
-1. Create the project.
+- **ReactJS**: For building the user interface.
+- **TypeScript**: For type safety and better development experience.
+- **Material-UI**: For UI components and styling.
+- **Jest**: For unit testing.
+- **Cypress**: For end-to-end testing.
+- **ESLint**: For code linting.
+- **Prettier**: For code formatting.
 
+## Getting Started
+
+Follow these steps to set up your project:
+
+1. **Create the project**:
    ```bash
    npx degit fabien-ml/react-ts-vite-template my-app
    ```
 
-2. Access the project directory.
-
+2. **Navigate to the project directory**:
    ```bash
    cd my-app
    ```
 
-3. Initialize a git repository.
-
+3. **Initialize a Git repository**:
    ```bash
    git init
    ```
 
-4. Install dependencies.
-
+4. **Install dependencies**:
    ```bash
    npm install
    ```
 
-5. Start dev server with hot reload at http://localhost:3000.
+5. **Start the development server**:
+   Open your browser and go to [http://localhost:3000](http://localhost:3000) to see your application in action.
    ```bash
    npm run dev
    ```
+
+## Components Overview
+
+### ColorPaletteGenerator
+
+This component allows users to input instructions and generate a color palette. It includes:
+
+- An input field for user instructions.
+- A button to trigger the palette generation.
+- A display area for the generated color blocks.
+
+### ColorBlock
+
+This component displays the generated colors in blocks. Each block shows the color's hex code and name, and allows users to copy the hex code to the clipboard by clicking on it.
+
+## API Integration
+
+The application communicates with an external API to generate color palettes based on user input. The API endpoint used is:
 
 ## Recommended VS Code extensions
 
@@ -84,7 +106,3 @@ npm run serve
   ```bash
   npm run test:e2e
   ```
-
-## License
-
-This project is licensed under the MIT License.
